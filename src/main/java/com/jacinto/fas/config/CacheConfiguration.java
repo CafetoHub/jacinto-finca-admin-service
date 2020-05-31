@@ -45,6 +45,23 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.jacinto.fas.domain.Finca.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Finca.class.getName() + ".cultivos");
+            createCache(cm, com.jacinto.fas.domain.Finca.class.getName() + ".owners");
+            createCache(cm, com.jacinto.fas.domain.Owner.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Cultivo.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Cultivo.class.getName() + ".agronomos");
+            createCache(cm, com.jacinto.fas.domain.Cultivo.class.getName() + ".agregados");
+            createCache(cm, com.jacinto.fas.domain.Cultivo.class.getName() + ".lotes");
+            createCache(cm, com.jacinto.fas.domain.Cultivo.class.getName() + ".certificadoras");
+            createCache(cm, com.jacinto.fas.domain.Lote.class.getName());
+            createCache(cm, com.jacinto.fas.domain.EntidadCertificadora.class.getName());
+            createCache(cm, com.jacinto.fas.domain.EntidadCertificadora.class.getName() + ".certificadores");
+            createCache(cm, com.jacinto.fas.domain.Certificador.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Agronomo.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Agregado.class.getName());
+            createCache(cm, com.jacinto.fas.domain.Agregado.class.getName() + ".certificados");
+            createCache(cm, com.jacinto.fas.domain.Certificado.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

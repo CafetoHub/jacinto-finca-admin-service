@@ -1,0 +1,45 @@
+{
+  "name": "Finca",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "elevation",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "gps",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "cultivo",
+      "otherEntityRelationshipName": "finca",
+      "relationshipName": "cultivos"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "owner",
+      "otherEntityRelationshipName": "finca",
+      "relationshipName": "owners"
+    }
+  ],
+  "changelogDate": "20200531152042",
+  "entityTableName": "finca",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

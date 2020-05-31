@@ -1,0 +1,25 @@
+{
+  "name": "Certificador",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "entidadCertificadora",
+      "otherEntityRelationshipName": "certificadores",
+      "relationshipName": "entidadCertificadora",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152542",
+  "entityTableName": "certificador",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

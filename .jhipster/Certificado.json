@@ -1,0 +1,36 @@
+{
+  "name": "Certificado",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateGiven",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "agregado",
+      "otherEntityRelationshipName": "certificados",
+      "relationshipName": "agregado",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152842",
+  "entityTableName": "certificado",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}
