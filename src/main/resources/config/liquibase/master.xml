@@ -14,7 +14,24 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152042_added_entity_Finca.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152142_added_entity_Owner.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152242_added_entity_Cultivo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152342_added_entity_Lote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152442_added_entity_EntidadCertificadora.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152542_added_entity_Certificador.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152642_added_entity_Agronomo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152742_added_entity_Agregado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152842_added_entity_Certificado.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200531152142_added_entity_constraints_Owner.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152242_added_entity_constraints_Cultivo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152342_added_entity_constraints_Lote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152442_added_entity_constraints_EntidadCertificadora.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152542_added_entity_constraints_Certificador.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152642_added_entity_constraints_Agronomo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152742_added_entity_constraints_Agregado.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200531152842_added_entity_constraints_Certificado.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

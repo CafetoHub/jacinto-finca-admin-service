@@ -1,0 +1,45 @@
+{
+  "name": "Lote",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "extension",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "elevacion",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cultivo",
+      "otherEntityRelationshipName": "lotes",
+      "relationshipName": "cultivo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152342",
+  "entityTableName": "lote",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

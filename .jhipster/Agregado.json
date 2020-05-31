@@ -1,0 +1,40 @@
+{
+  "name": "Agregado",
+  "fields": [
+    {
+      "fieldName": "cedula",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "certificado",
+      "otherEntityRelationshipName": "agregado",
+      "relationshipName": "certificados"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cultivo",
+      "otherEntityRelationshipName": "agregados",
+      "relationshipName": "cultivo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152742",
+  "entityTableName": "agregado",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

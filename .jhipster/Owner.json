@@ -1,0 +1,30 @@
+{
+  "name": "Owner",
+  "fields": [
+    {
+      "fieldName": "cedula",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "finca",
+      "otherEntityRelationshipName": "owners",
+      "relationshipName": "finca",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152142",
+  "entityTableName": "owner",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

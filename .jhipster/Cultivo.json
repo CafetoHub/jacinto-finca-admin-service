@@ -1,0 +1,61 @@
+{
+  "name": "Cultivo",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tipo",
+      "fieldType": "TipoCultivo",
+      "fieldValues": "HASS,REED,LIMON",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "agronomo",
+      "otherEntityRelationshipName": "cultivo",
+      "relationshipName": "agronomos"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "agregado",
+      "otherEntityRelationshipName": "cultivo",
+      "relationshipName": "agregados"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "lote",
+      "otherEntityRelationshipName": "cultivo",
+      "relationshipName": "lotes"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "entidadCertificadora",
+      "otherEntityRelationshipName": "cultivo",
+      "relationshipName": "certificadoras"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "finca",
+      "otherEntityRelationshipName": "cultivos",
+      "relationshipName": "finca",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152242",
+  "entityTableName": "cultivo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}

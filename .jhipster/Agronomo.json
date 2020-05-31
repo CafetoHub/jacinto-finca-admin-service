@@ -1,0 +1,38 @@
+{
+  "name": "Agronomo",
+  "fields": [
+    {
+      "fieldName": "cedula",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cedulaProfesional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cultivo",
+      "otherEntityRelationshipName": "agronomos",
+      "relationshipName": "cultivo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152642",
+  "entityTableName": "agronomo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}
