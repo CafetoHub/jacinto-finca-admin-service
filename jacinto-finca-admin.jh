@@ -1,0 +1,84 @@
+entity Finca {
+	name String required,
+    elevation Integer required,
+    gps String}
+
+entity Owner {
+	id String required,
+    cedula String
+}
+
+entity Cultivo {
+	name String required,
+    tipo TipoCultivo required
+}
+
+entity Lote {
+    name String required,
+    extension Long required,
+    elevacion Long required,
+    description String
+}
+
+entity EntidadCertificadora {
+	name String required,
+    tipo TipoCertificadora required
+}
+
+entity Certificador {
+	id String required
+}
+
+entity Agronomo {
+	id String required,
+    cedula String,
+    cedulaProfesional String,
+    active Boolean
+}
+
+entity Agregado {
+	id String required,
+    cedula String,
+    active Boolean
+}
+
+entity Certificado {
+    name String required,
+    dateGiven String required
+}
+
+entity User {
+    id String required
+}
+
+enum TipoCultivo {
+    HASS, REED, LIMON
+}
+
+enum TipoCertificadora {
+    BPA, PREDIO_EXPORTADOR, GLOBAL_GAP
+}
+
+relationship OneToMany {
+	Finca{cultivos} to Cultivo,
+    Finca{owners} to Owner,
+    Cultivo{agronomos} to Agronomo,
+    Cultivo{agregados} to Agregado,
+    Cultivo{lotes} to Lote,
+    Agregado{certificados} to Certificado,
+    Cultivo{certificadoras} to EntidadCertificadora,
+    EntidadCertificadora{certificadores} to Certificador
+}
+
+relationship OneToOne {
+	Owner{id} to User{id},
+	Agregado{id} to User{id},
+	Agronomo{id} to User{id},
+    Certificador{id} to User{id}
+}
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except User
