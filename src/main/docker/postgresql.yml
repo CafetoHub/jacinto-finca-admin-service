@@ -1,0 +1,11 @@
+version: '2'
+services:
+  jacintofincaadminservice-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/jacintoFincaAdminService/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=jacintoFincaAdminService
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
