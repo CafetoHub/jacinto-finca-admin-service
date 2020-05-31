@@ -1,0 +1,43 @@
+{
+  "name": "EntidadCertificadora",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tipo",
+      "fieldType": "TipoCertificadora",
+      "fieldValues": "BPA,PREDIO_EXPORTADOR,GLOBAL_GAP",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "certificador",
+      "otherEntityRelationshipName": "entidadCertificadora",
+      "relationshipName": "certificadores"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cultivo",
+      "otherEntityRelationshipName": "certificadoras",
+      "relationshipName": "cultivo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200531152442",
+  "entityTableName": "entidad_certificadora",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "jacintoFincaAdminService",
+  "applications": "*",
+  "microserviceName": "jacintoFincaAdminService"
+}
